@@ -27,7 +27,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="home.html">Home</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="create.html">Create account</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.html">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -35,66 +36,53 @@
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-            </div>
-        </header>
-        <!-- Portfolio Section-->
-
-        <!------------------Level 1--------------------------->
-
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Level 1</h2>
+                <!-- Masthead Avatar Image-->
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Create account</h1>
                 <!-- Icon Divider-->
-                <div class="divider-custom">
+                <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-
-                <p> Your challenges for level 1:
-                    <ul>
-                        <li>Bring reusable bags to the grocery store</li>
-
-                        <form action="/action_page.php">
-                            <input type="file" id="myFile" name="filename">
-                            <br>
-                            <input type="submit">
-                            <br>
-                          </form>
-                          <br>
-
-                        <li>Switch to using a reusable water bottle</li>
-                        <form action="/action_page.php">
-                            <input type="file" id="myFile" name="filename">
-                            <br>
-                            <input type="submit">
-                            <br>
-                          </form>
-                      </ul>
-                </p>
-
-                <a href = "level2.html">
-                <button type="submit" onclick = "level2.html" class="btn btn-primary">Complete Level!</button>
-                </a>
-            </div>  
-
+                <!-- Masthead Subheading-->
+            </div>
+        </header>
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+            <form style="width: 50%" action="home.html">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Full Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter full name">
+                  </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                
+                <button type="submit" class="btn btn-primary text-center">Submit</button>
+              </form>
+              </div>
 
         </section>
        
 
 
        
- 
         
-        <!-- Footer-->
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-
+             <!-- Footer-->
+             <footer class="footer text-center">
+                <div class="container">
+                    <div class="row">
+    
+                    </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
 
 
         <!-- Bootstrap core JS-->
