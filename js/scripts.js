@@ -6,6 +6,40 @@
 //
 // Scripts
 // 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore"; 
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDuqHA7ILJx6UCU3n6ptxGS21XgvoVHhu0",
+  authDomain: "csci499-crbn.firebaseapp.com",
+  projectId: "csci499-crbn",
+  storageBucket: "csci499-crbn.appspot.com",
+  messagingSenderId: "289852449313",
+  appId: "1:289852449313:web:cb059e7fdabb4d36ec3960",
+  measurementId: "G-TYCBDP9BRL"
+};
+
+var ref = firebase.database().ref();                           
+ref.on("value", function(snapshot){
+    output.innerHTML = JSON.stringify(snapshot.val(), null, 2);
+});
+
+//var firebase = require('firebase');
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore();
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -52,3 +86,20 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function writeData() {
+    console.log("Hello world!");
+
+    try {
+    const docRef = await addDoc(collection(db, "users"), {
+        email: "ashnacha@usc.edu",
+        name: "Ashna Chandra",
+        password: "test",
+
+    });
+    console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+    console.error("Error adding document: ", e);
+
+    }
+}
